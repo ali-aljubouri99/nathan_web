@@ -1,0 +1,485 @@
+:root {
+    --main-color:#f9004d;
+    --main-color2:#fcfc;
+}
+/* start global rols */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    box-sizing: border-box;
+    padding:0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+.contener {
+    padding-left:15px;
+    padding-right:15px;
+    margin-left:auto;
+    margin-right:auto;
+}
+@media (min-width:768px) {
+    .contener {
+        width:750px;
+    }
+}
+@media (min-width:992px) {
+    .contener {
+        width:970px;
+    }
+}
+@media (min-width:1200px) {
+    .contener {
+        width:1170px;
+    }
+}
+/* end global rols */
+/* start header */
+header {
+    position: absolute;
+    width:100%;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+}
+header .contener {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+header .contener .logo {
+    text-decoration: none;
+    text-transform: capitalize;
+    color:#fff;
+    font-size: 30px;
+    font-weight: 600;
+}
+header .contener .logo span {
+    color:var(--main-color);
+}
+header .contener nav {
+    transition: 0.5s !important;
+}
+header .contener nav ul {
+    list-style: none;
+}
+
+@media (max-width: 991px) {
+    header .contener nav ul{
+        background-color: #191919;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        height: calc(100vh - 94px);
+        transition: 0.5s !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+header .contener nav ul li {
+    display: inline-block;
+    margin: 0px 25px;
+}
+@media (max-width: 991px) {
+    header .contener nav ul li {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+}
+header .contener nav ul li a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: capitalize;
+    color:#fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.5s;
+}
+@media (max-width: 991px) {
+    header .contener nav ul li a {
+        font-size: 22px;
+    }
+}
+header .contener nav ul li a:hover{
+    color: var(--main-color) !important;
+}
+header .contener .btn i {
+    color:#fff;
+    font-size: 20px;
+    margin-right: 15px;
+}
+@media (min-width:992px) {
+    header .contener .btn i {
+        display: none;
+    }
+}
+header .contener .btn a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: capitalize;
+    color:#fff;
+    font-weight: bold;
+    background-color: var(--main-color);
+    padding:8px 18px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+@media (max-width: 991px) {
+    header .contener .btn a {
+        font-size: 13px;
+    }
+}
+header .contener .btn a:hover {
+    transform: scale(1.1);
+}
+/* end header */
+/* start landing */
+.landing {
+    background-image: url("../image/background.jpg");
+    background-size: cover;
+    width:100%;
+    height:100vh;
+}
+@media (max-width:991px) {
+    .landing {
+        background-position: 60% 0%;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .landing {
+        background-position: 60% 0%;
+    }
+}
+.landing .contener {
+    position: relative;
+    height: 100vh;
+}
+.landing .contener .info {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@media (max-width: 767px) {
+    .landing .contener .info {
+        left: 25px;
+    }
+}
+.landing .info p:first-child {
+    font-weight: 600;
+    color:var(--main-color2);
+    font-size: 18px;
+}
+.landing .info h1 {
+    text-transform: capitalize;
+    font-size: 50px;
+    margin:10px 0px;
+}
+.landing .info h1 span {
+    color:var(--main-color);
+}
+.landing .info p:last-of-type {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.landing .info a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: capitalize;
+    color:#fff;
+    background-color: var(--main-color);
+    padding:10px 22px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    transition:0.5s;
+    border:solid 2px var(--main-color);
+}
+.landing .info a:hover {
+    background-color: transparent;
+}
+#scrollToTop {
+    color: #fff;
+    position: fixed;
+    bottom: 30px;
+    right: -50px;
+    text-decoration: none;
+    background-color: var(--main-color);
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.4s;
+    cursor: pointer;
+    border: solid 2px var(--main-color);
+    animation-name: scrollToTop;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate-reverse;
+}
+@media (max-width: 767px) {
+    #scrollToTop {
+        font-size: 18px;
+        padding: 8px;
+    }
+}
+#scrollToTop:hover {
+    background-color: transparent;
+}
+/* end landing */
+/* start about */
+.about {
+    padding-top:100px;
+    padding-bottom:100px;
+    background-color: #191919;
+}
+.about .contener {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 1199px) {
+    .about .contener {
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+.about .contener .image {
+    flex: 1;
+    animation-name: UpAndDoun;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.about .contener .image img {
+    position: relative;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    border-radius: 12px;
+}
+@media (max-width:767px) {
+    .about .contener .image img {
+        width:300px;
+    }
+}
+.about .contener .text {
+    flex: 1;
+    color:#fff;
+}
+@media (max-width:767px) {
+    .about .contener .text {
+        margin-left:10px;
+    }
+}
+.about .contener .text h1 {
+    font-size: 70px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+@media (max-width:767px) {
+    .about .contener .text h1 {
+        font-size: 40px;
+    }
+}
+.about .contener .text h4 {
+    text-transform:capitalize;
+    font-size: 20px;
+    margin-bottom:30px;
+    letter-spacing: 2px;
+}
+.about .contener .text h4 span {
+    color:var(--main-color);
+}
+.about .contener .text p {
+    color:var(--main-color2);
+    line-height: 1.6;
+    font-size: 18px;
+}
+.about .contener .text a {
+    display: inline-block;
+    margin-top:50px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color:#fff;
+    background-color: var(--main-color);
+    padding:10px 22px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    transition:0.5s;
+    border:solid 2px var(--main-color);
+}
+.about .contener .text a:hover {
+    background-color: transparent;
+}
+/* end about */
+/* start services */
+.services {
+    padding-top:70px;
+    padding-bottom:120px;
+    background-color: #000;
+    color:#fff;
+}
+.services .title {
+    text-align: center;
+    margin-bottom:50px;
+    text-transform: capitalize;
+    font-size: 50px;
+}
+.services .srv-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+    grid-gap:30px;
+}
+@media (max-width: 400px) {
+    .services .srv-box {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+.services .srv-box .card {
+    text-align: center;
+    background-color: #191919;
+    padding:20px;
+    border-radius:10px ;
+    transition: 0.5s;
+    cursor: pointer;
+} 
+.services .srv-box .card:hover {
+    box-shadow: 0px 0px 20px #fff;
+}
+.services .srv-box .card i {
+    color:var(--main-color);
+    font-size: 50px;
+    margin-bottom:10px;
+}
+.services .srv-box .card h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.services .srv-box .card p {
+    color:var(--main-color2);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.services .srv-box .card a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding:8px 18px;
+    background-color: var(--main-color);
+    border:solid 2px var(--main-color);
+    border-radius: 20px;
+    color:#fff;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.5s;
+}
+.services .srv-box .card a:hover {
+    background-color: transparent;
+}
+/* end services */
+/* start skills */
+.skills {
+    padding:70px 0px;
+    background-color: #191919;
+    color:#fff;
+    text-align: center;
+}
+.skills h1 {
+    font-size: 30px;
+    margin:0px;
+    margin-bottom:30px;
+}
+@media (max-width:767px) {
+    .skills h1 {
+        font-size: 20px;
+    }
+}
+.skills a {
+    display: inline-block;
+    color:#fff;
+    text-transform: capitalize;
+    text-decoration: none;
+    background-color: var(--main-color);
+    border-radius: 20px;
+    padding:8px 18px;
+    font-weight: bold;
+    border:solid 2px var(--main-color);
+    transition: 0.5s;
+}
+.skills a:hover {
+    background-color: transparent;
+    border:solid 2px var(--main-color);
+}
+/* end skills */
+/* start footer */
+footer {
+    background-color: #000;
+    color:#fff;
+    text-align: center;
+    padding: 70px 0px;
+}
+footer .contener h2 {
+    text-transform: capitalize;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+footer .contener p {
+    color:var(--main-color2);
+    font-size: 18px;
+    width:630px;
+    max-width:100%;
+    margin:0px auto 20px;
+}
+
+footer .contener .links i {
+    font-size: 22px;
+    margin:0px 10px;
+    background-color: var(--main-color);
+    width:45px;
+    height:45px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border:solid 2px var(--main-color);
+    cursor: pointer;
+    transition: 0.5s;
+}
+footer .contener .links i:hover {
+    background-color: transparent;
+}
+/* end footer */
+
+/* start animation */
+@keyframes UpAndDoun {
+    0% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(15px);
+    }
+}
+@keyframes scrollToTop {
+    0% {
+        transform: translateY(-4px);
+    }
+    100% {
+        transform: translateY(4px);
+    }
+}
+/* end animation */
